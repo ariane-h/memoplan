@@ -13,10 +13,19 @@ const NavBar = ({ auth, profile }) => {
 	return (
 		<nav className="nav-wrapper grey darken-3">
 			<div className="container">
-				<Link to="/" className="brand-logo left">
-					memo plan
-				</Link>
-				{links}
+				<div className="hide-on-small-only">
+					<Link to="/" className="brand-logo left">
+						memo plan
+					</Link>
+					{links}
+				</div>
+
+				<div className="hide-on-med-and-up">
+					<Link to="/" className="left ">
+						<h7>memo plan</h7>
+					</Link>
+					{links}
+				</div>
 			</div>
 		</nav>
 	);
