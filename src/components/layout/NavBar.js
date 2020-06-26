@@ -22,7 +22,7 @@ const NavBar = ({ auth, profile }) => {
 
 				<div className="hide-on-med-and-up">
 					<Link to="/" className="left ">
-						<h7>memo plan</h7>
+						<h5>memo plan</h5>
 					</Link>
 					{links}
 				</div>
