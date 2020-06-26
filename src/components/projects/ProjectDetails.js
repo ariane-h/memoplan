@@ -31,8 +31,8 @@ const ProjectDetails = (props) => {
 						</div>
 						<div>{moment(project.createdAt.toDate()).calendar()}</div>
 					</div>
-					<div className="card-action grey lighten-4 row">
-						<div className="col s1">
+					<div className="card-action grey lighten-4 row form-buttons">
+						<div className="form-button">
 							<a
 								href={`/projects/${id}/edit`}
 								className="btn z-depth-0 purple lighten-2 white-text"
@@ -41,7 +41,7 @@ const ProjectDetails = (props) => {
 							</a>
 						</div>
 
-						<div className="col s1">
+						<div className="form-button">
 							<button
 								className="btn z-depth-0 red lighten-2 white-text"
 								onClick={handleDelete}
@@ -49,7 +49,6 @@ const ProjectDetails = (props) => {
 								Delete
 							</button>
 						</div>
-						<div className="className col s10"></div>
 					</div>
 				</div>
 			</div>

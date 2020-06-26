@@ -23,3 +23,12 @@ form h5 {
 .brand-logo {
 	letter-spacing: 0.07em;
 }
+
+.form-buttons {
+	display: flex;
+	flex-direction: row;
+}
+
+.form-button {
+	padding: 0.5em;
+}
