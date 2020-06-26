@@ -1,5 +1,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const { firestore } = require("firebase-admin");
 admin.initializeApp(functions.config().firebase);
 
 const createNotification = (notification) => {
@@ -45,8 +46,8 @@ exports.projectUpdated = functions.firestore
 	.onUpdate((change, context) => {
 		const project = change.after.data();
 		const notification = {
-			content: "Updated a project",
-			user: `${project.authorFirstName} ${project.authorLastName}`,
+			content: `${project.title} - project updated`,
+			user: "",
 			time: admin.firestore.FieldValue.serverTimestamp(),
 		};
 		return createNotification(notification);
@@ -57,8 +58,8 @@ exports.projectDeleted = functions.firestore
 	.onDelete((snap, context) => {
 		const project = snap.data();
 		const notification = {
-			content: "Deleted a project",
-			user: `${project.authorFirstName} ${project.authorLastName}`,
+			content: `${project.title} - project deleted`,
+			user: "",
 			time: admin.firestore.FieldValue.serverTimestamp(),
 		};
 		return createNotification(notification);

@@ -9,6 +9,7 @@ import { Redirect } from "react-router-dom";
 
 export class Dashboard extends Component {
 	render() {
+		console.log(this.props);
 		const { projects, auth, notifications } = this.props;
 
 		if (!auth.uid) return <Redirect to="/signin" />;
