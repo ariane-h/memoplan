@@ -42,11 +42,11 @@ const rrfProps = {
 	sessions: "sessions",
 };
 
-// function AuthIsLoaded({ children }) {
-// 	const auth = useSelector((state) => state.firebase.auth);
-// 	if (!isLoaded(auth)) return null;
-// 	return children;
-// }
+function AuthIsLoaded({ children }) {
+	const auth = useSelector((state) => state.firebase.auth);
+	if (!isLoaded(auth)) return null;
+	return children;
+}
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -54,8 +54,9 @@ ReactDOM.render(
 			{" "}
 			<ReactReduxFirebaseProvider {...rrfProps}>
 				{" "}
-				{/* <AuthIsLoaded> */}
-				<App /> {/* </AuthIsLoaded> */}
+				<AuthIsLoaded>
+					<App />{" "}
+				</AuthIsLoaded>
 			</ReactReduxFirebaseProvider>
 		</Provider>
 	</React.StrictMode>,
