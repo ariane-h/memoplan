@@ -21,3 +21,41 @@ export const createProject = (project) => {
 			});
 	};
 };
+
+export const deleteProject = (id) => {
+	return (dispatch, getState, { getFirebase, getFirestore }) => {
+		const firestore = getFirestore();
+		firestore
+			.collection("projects")
+			.doc(id)
+			.delete()
+			.then(() => {
+				dispatch({ type: "DELETE_PROJECT", id });
+			})
+			.catch((err) => {
+				dispatch({ type: "DELETE_PROJECT_ERROR", err });
+			});
+	};
+};
+
+export const updateProject = (id, project) => {
+	return (dispatch, getState, { getFirebase, getFirestore }) => {
+		const firestore = getFirestore();
+		const newTitle = project.title;
+		const newContent = project.content;
+		firestore
+			.collection("projects")
+			.doc(id)
+			.update({
+				...project,
+				title: newTitle,
+				content: newContent,
+			})
+			.then(() => {
+				dispatch({ type: "UPDATE_PROJECT", project });
+			})
+			.catch((err) => {
+				dispatch({ type: "UPDATE_PROJECT_ERROR", err });
+			});
+	};
+};
