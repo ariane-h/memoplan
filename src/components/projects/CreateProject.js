@@ -18,6 +18,7 @@ export class CreateProject extends Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		this.props.createProject(this.state);
+		this.props.history.push("/");
 	};
 	render() {
 		if (!this.props.auth.uid) return <Redirect to="/signin" />;

@@ -30,11 +30,21 @@ export class SignIn extends Component {
 					<h5 className="grey-text text-darken-3">Log In</h5>
 					<div className="input-field">
 						<label htmlFor="email">Email</label>
-						<input type="text" id="email" onChange={this.handleChange} />
+						<input
+							type="email"
+							id="email"
+							onChange={this.handleChange}
+							required
+						/>
 					</div>
 					<div className="input-field">
 						<label htmlFor="password">Password</label>
-						<input type="text" id="password" onChange={this.handleChange} />
+						<input
+							type="password"
+							id="password"
+							onChange={this.handleChange}
+							required
+						/>
 					</div>
 					<div>
 						<button className="btn z-depth-0 purple lighten-2 white-text">
