@@ -1,10 +1,12 @@
-# :memo: memo plan
+# memo plan
 
 A learning project - memo plan is a web app built to keep track of a list of projects.
 
 ## :seedling: Demo
 
 memo plan lives here on the web: memoplan.web.app
+
+![ alt text ](public/img/memoplan_demo.gif)
 
 ## :art: Features
 
