@@ -10,11 +10,11 @@ memo plan lives here on the web https://memoplan.web.app/
 
 ## :art: Features
 
-    * Built with React and Redux, also using Thunk.
-    * Hosted with Firebase. Using Firestore cloud functions to generate real-time notifications.
-    * CRUD: a user can create projects, update and delete them.
-    * Auth: Users can signup, login and logout of the app.
-    * Styling with materialize.css
+   * Built with React and Redux, also using Thunk.
+   * Hosted with Firebase. Using Firestore cloud functions to generate real-time notifications.
+   * CRUD: a user can create projects, update and delete them.
+   * Auth: Users can signup, login and logout of the app.
+   * Styling with materialize.css
 
 ## :wrench: Installation
 
