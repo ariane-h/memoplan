@@ -54,6 +54,9 @@ export class SignUp extends Component {
 							id="firstName"
 							onChange={this.handleChange}
 							required
+							minLength="1"
+							pattern="\S+"
+							title="Characters only please"
 						/>
 					</div>
 					<div className="input-field">
@@ -63,6 +66,9 @@ export class SignUp extends Component {
 							id="lastName"
 							onChange={this.handleChange}
 							required
+							minLength="1"
+							pattern="\S+"
+							title="Characters only please"
 						/>
 					</div>
 					<div>
