@@ -13,7 +13,7 @@ memo plan lives here on the web https://memoplan.web.app/
    * Built with React and Redux, also using Thunk.
    * Hosted with Firebase. Using Firestore cloud functions to generate real-time notifications.
    * CRUD: a user can create projects, update and delete them.
-   * Auth: Users can signup, login and logout of the app.
+   * Auth: Users can signup, login and logout of the app. Only the project author can update/delete a project.
    * Styling with materialize.css
 
 ## :wrench: Installation
@@ -25,6 +25,10 @@ npm install
 ```
 
 Once the dependencies have been installed, use `npm start` to run the app. Visit localhost:3000 in your browser to access it.
+
+### :crystal_ball: Possible Extension Features
+
+* Tailored notifications
 
 ### Thanks
 
