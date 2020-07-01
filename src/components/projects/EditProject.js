@@ -18,7 +18,6 @@ class EditProject extends Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		const id = this.props.id;
-		console.log(id, this.state);
 		this.props.updateProject(id, this.state);
 		this.props.history.push("/");
 	};

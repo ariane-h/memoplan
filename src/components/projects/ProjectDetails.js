@@ -17,6 +17,31 @@ const ProjectDetails = (props) => {
 		props.history.push("/");
 	};
 
+	const editDeleteButtons =
+		project && auth.uid ? (
+			project.authorId === auth.uid ? (
+				<div className="card-action grey lighten-4 row form-buttons">
+					<div className="form-button">
+						<a
+							href={`/projects/${id}/edit`}
+							className="btn z-depth-0 purple lighten-2 white-text"
+						>
+							Edit
+						</a>
+					</div>
+
+					<div className="form-button">
+						<button
+							className="btn z-depth-0 red lighten-2 white-text"
+							onClick={handleDelete}
+						>
+							Delete
+						</button>
+					</div>
+				</div>
+			) : null
+		) : null;
+
 	if (project) {
 		return (
 			<div className="container section project-details">
@@ -31,25 +56,7 @@ const ProjectDetails = (props) => {
 						</div>
 						<div>{moment(project.createdAt.toDate()).calendar()}</div>
 					</div>
-					<div className="card-action grey lighten-4 row form-buttons">
-						<div className="form-button">
-							<a
-								href={`/projects/${id}/edit`}
-								className="btn z-depth-0 purple lighten-2 white-text"
-							>
-								Edit
-							</a>
-						</div>
-
-						<div className="form-button">
-							<button
-								className="btn z-depth-0 red lighten-2 white-text"
-								onClick={handleDelete}
-							>
-								Delete
-							</button>
-						</div>
-					</div>
+					{editDeleteButtons}
 				</div>
 			</div>
 		);
