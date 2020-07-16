@@ -4,13 +4,13 @@ import "firebase/auth";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-	apiKey: "AIzaSyDcdtJcRsCveITPsjxBF1E3ahe6SxWTNOQ",
-	authDomain: "memoplan.firebaseapp.com",
-	databaseURL: "https://memoplan.firebaseio.com",
-	projectId: "memoplan",
-	storageBucket: "memoplan.appspot.com",
-	messagingSenderId: "363527896230",
-	appId: "1:363527896230:web:dfdc5bdab92478c3c9c867",
+	apiKey: process.env.REACT_APP_FIREBASE_KEY,
+	authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+	databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
+	projectId: process.env.REACT_APP_PROJECT_ID,
+	storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+	appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

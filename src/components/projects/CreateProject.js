@@ -50,6 +50,7 @@ export class CreateProject extends Component {
 }
 
 const mapStateToProps = (state) => {
+	console.log(state);
 	const title = state.title;
 	const content = state.content;
 	return {
